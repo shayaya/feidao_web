@@ -1,7 +1,5 @@
-/build
-/target
-/.settings
-/.classpath
-/.project
+target/
+.settings/
+.classpath
+.project
 /.git
-/tmp

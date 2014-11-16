@@ -1,0 +1,33 @@
+1) Download mysql
+
+2) Start mysql server in windows
+	mysqld --console
+	
+3) Connect mysql with root, create database pay
+	mysql -u root -p
+	> create database pay default charset utf8;
+
+4) Import database dump file.
+# mysql -u yourusername -p yourpassword yourdatabase < text_file
+   mysql -u root pay < E:\projects\git\feidao_web\feidao_web_backend\doc\dbscript\pay.sql
+
+optional)
+	Create a user for pay application.  Make sure database is under a firewall. 
+	
+	mysql -u root
+	
+	> CREATE USER 'pay'@'localhost' IDENTIFIED BY 'pay';
+	> GRANT ALL PRIVILEGES ON pay.* TO 'pay'@'localhost';
+	> CREATE USER 'pay'@'%' IDENTIFIED BY 'pay';
+	> GRANT ALL PRIVILEGES ON pay.* TO 'pay'@'%';
+	> flush privileges;
+	#The 'pay'@'localhost' account can be used only when connecting from the local host. 
+	#The 'pay'@'%' account uses the '%' wildcard for the host part, so it can be used to connect from any host.
+	
+	To check the privileges for an account
+	> SHOW GRANTS FOR 'pay'@'localhost';
+	
+	show current user
+	> select current_user();
+	
+	

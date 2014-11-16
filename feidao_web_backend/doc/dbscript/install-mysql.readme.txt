@@ -3,6 +3,9 @@
 2) Start mysql server in windows
 	mysqld --console
 	
+   Stop mysql server in windows
+   mysqladmin -u root shutdown
+	
 3) Connect mysql with root, create database pay
 	mysql -u root -p
 	> create database pay default charset utf8;
@@ -29,5 +32,8 @@ optional)
 	
 	show current user
 	> select current_user();
+	
+	Connect to remote Database
+	>mysql -u pay -p -h 192.168.1.9
 	
 	

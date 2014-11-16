@@ -1,13 +1,14 @@
-package com.feidao.web.backend.service;
+package com.feidao.web.backend.dao;
 
 import java.util.List;
 
 import com.feidao.web.backend.model.Employee;
 
-public interface EmployeeService {
+public interface EmployeeDao {
+
+
+	public List<Employee> getEmployeeByFirstName(String firstName);
 
 	public void addEmployee(Employee employee);
-	
-	public List<Employee> getEmployeeByFirstName(String firstName);
 
 }

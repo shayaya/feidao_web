@@ -1,5 +1,6 @@
 package com.feidao.web.backend.test;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
@@ -14,7 +15,7 @@ public class HibernateTest {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("/spring/root-context.xml");
 		
-		EmployeeService employeeService = (EmployeeService)context.getBean("EmployeeService");
+		EmployeeService employeeService = (EmployeeService)context.getBean("employeeServiceImpl");
 		
 		employeeService.addEmployee(buildEmployee1());
 		
@@ -31,6 +32,7 @@ public class HibernateTest {
 		employee.setFirstName("feidao");
 		employee.setLastName("shayaya");
 		employee.setTelephone("1111");
+		employee.setCreated(new Date());
 		return employee;
 	}
 

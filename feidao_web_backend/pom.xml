@@ -23,6 +23,9 @@
 	<!-- spring -->
 	<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
 	
+	<!-- mysql driver -->
+	<mysql.driver.version>5.1.6</mysql.driver.version>
+	
 	<!-- Hibernate / JPA -->
 	<hibernate.version>4.2.1.Final</hibernate.version>
     
@@ -66,6 +69,13 @@
 		<version>${org.springframework-version}</version>
 	</dependency>
 	
+	<!-- mysql driver -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql.driver.version}</version>
+	</dependency>
+	
 	<!-- Hibernate -->
 	
 	<dependency>
@@ -89,12 +99,6 @@
                        <artifactId>jboss-transaction-api_1.1_spec</artifactId>
                </exclusion>
       		 </exclusions>
-	</dependency>
-	
-	<dependency>
-		<groupId>c3p0</groupId>
-		<artifactId>c3p0</artifactId>
-		<version>0.9.1.2</version>
 	</dependency>
 	
 	<dependency>

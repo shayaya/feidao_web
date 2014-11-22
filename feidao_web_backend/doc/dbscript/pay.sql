@@ -10,7 +10,7 @@ CREATE TABLE Employee (
     firstName   VARCHAR(30),
     lastName   VARCHAR(30),
     telephone   VARCHAR(15),
-    email      VARCHAR(30),
+    email      VARCHAR(30) UNIQUE,
     created     TIMESTAMP DEFAULT NOW(),
     PRIMARY KEY (id)
 );

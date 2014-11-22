@@ -11,4 +11,6 @@ public interface EmployeeDao {
 
 	public void addEmployee(Employee employee);
 
+	public Employee getEmployeeByEmail(String email);
+
 }

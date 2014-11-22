@@ -29,6 +29,17 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		return q.list();
 	}
 	
+	@SuppressWarnings("unchecked")
+	@Override
+	public Employee getEmployeeByEmail(String email) {
+		
+		Query q = sessionFactory.getCurrentSession().createQuery("from Employee where upper(email)=upper(:email)");
+		q.setParameter("email", email);
+		List<Employee> empList = (List<Employee>)q.list();
+		if(null == empList || empList.size() <=0){
+			return null;
+		}
+		return empList.get(0);
+	}
 	
-
 }

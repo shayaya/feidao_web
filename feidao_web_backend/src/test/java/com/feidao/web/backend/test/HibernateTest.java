@@ -24,6 +24,9 @@ public class HibernateTest {
 		if(null != employeeList){
 			System.out.println("size of employee list: "+ employeeList.size());
 		}
+		
+		Employee emp = employeeService.getEmployeeByEmail("feidao@shayaya.com");
+		System.out.println("Employee: "+ emp);
 	}
 	
 	private static Employee buildEmployee1(){

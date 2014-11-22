@@ -5,7 +5,7 @@
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
   	
     <!-- JDBC Data Source for mysql -->
 
@@ -35,7 +35,7 @@
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 	  <property name="dataSource" ref="dataSource"/>
 	   <property name="mappingLocations">
-			<value>/hibernate/pay/*.hbm.xml</value>
+			<value>classpath:/hibernate/pay/*.hbm.xml</value>
 	   </property>
 	  <property name="hibernateProperties">
 	  	<props>

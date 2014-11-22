@@ -10,4 +10,6 @@ public interface EmployeeService {
 	
 	public List<Employee> getEmployeeByFirstName(String firstName);
 
+	public Employee getEmployeeByEmail(String email);
+
 }

@@ -28,4 +28,11 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return employeeDao.getEmployeeByFirstName(firstName);
 	}
 	
+	@Override
+	@Transactional("transactionManager")
+	public Employee getEmployeeByEmail(String email) {
+		
+		return employeeDao.getEmployeeByEmail(email);
+	}
+	
 }

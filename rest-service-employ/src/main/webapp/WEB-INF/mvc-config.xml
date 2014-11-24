@@ -23,7 +23,12 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	 <!-- Total customization - see below for explanation. -->
+	 <!-- Total customization - see below for explanation. 
+	 	In Spring, content type can be requested in the following three ways in order:
+	 		- Add a path extension (suffix) in the URL
+	 		- A URL parameter like this: http://myserver/myapp/accounts/list?format=xls, disabled by default
+	 		- Finally the Accept HTTP header property is checked. But it can be problematic to use.
+	 -->
 	<bean id="contentNegotiationManager"
              class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
 	    <property name="favorPathExtension" value="false" />

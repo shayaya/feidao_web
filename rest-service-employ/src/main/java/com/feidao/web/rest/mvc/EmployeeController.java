@@ -17,7 +17,7 @@ import com.feidao.web.backend.model.EmployeeList;
 import com.feidao.web.backend.service.EmployeeService;
 
 @Controller
-@RequestMapping("/employee")
+@RequestMapping("/v1/employee")
 public class EmployeeController {
 
 	@Autowired
